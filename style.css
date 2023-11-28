@@ -1,3 +1,15 @@
 * {
   list-style-type: none;
 }
+
+main ul li {
+  border-color: grey;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.fa-solid.fa-delete-left {
+  color: red;
+}

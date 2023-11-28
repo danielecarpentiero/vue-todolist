@@ -33,18 +33,33 @@
             <input
               type="text"
               class="form-control"
-              placeholder="Scrivi qualcosa..."
+              placeholder="Write a task..."
             />
             <button class="btn btn-primary" type="button" id="button-addon2">
-              Invio
+              Send
             </button>
           </div>
-          <div class="col col-md-6">
-            <div class="row">
-              <ul>
-                <li></li>
-              </ul>
-            </div>
+          <ul v-if="tasks.length > 0">
+            <li v-for="(task, index) in tasks">
+              <div class="card mt-2 mb-2">
+                <div class="card-body d-flex justify-content-between">
+                  <span :class="{ 'completed': !task.done }"
+                    >{{ task.text }}</span
+                  >
+                  <i
+                    class="fa-solid fa-delete-left"
+                    @click="deleteTask(index)"
+                  ></i>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div
+            class="alert alert-success"
+            role="alert"
+            v-if="tasks.length === 0"
+          >
+            Your list is empty. Enjoy your day!
           </div>
         </div>
       </main>
