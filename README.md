@@ -15,5 +15,5 @@ Cliccando sul pulsante _Send_, il testo digitato viene letto e utilizzato per cr
 
 ### Bonus:
 
-1- oltre al click sul pulsante, anche il tasto _enter_ vale per aggiungere todos alla lista
-2- cliccando sul testo dell'item, il valore booleano dell'elemento si inverte (se era true diventa false)
+- Oltre al click sul pulsante, anche il tasto _enter_ vale per aggiungere todos alla lista
+- Cliccando sul testo dell'item, il valore booleano dell'elemento si inverte (se era true diventa false)
