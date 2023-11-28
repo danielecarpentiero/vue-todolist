@@ -34,8 +34,15 @@
               type="text"
               class="form-control"
               placeholder="Write a task..."
+              v-model="newTaskText"
+              @keyup.enter="addTask"
             />
-            <button class="btn btn-primary" type="button" id="button-addon2">
+            <button
+              class="btn btn-primary"
+              type="button"
+              id="button-addon2"
+              @click="addTask"
+            >
               Send
             </button>
           </div>
@@ -43,7 +50,7 @@
             <li v-for="(task, index) in tasks">
               <div class="card mt-2 mb-2">
                 <div class="card-body d-flex justify-content-between">
-                  <span :class="{ 'completed': !task.done }"
+                  <span :class="{ 'completed': task.done }"
                     >{{ task.text }}</span
                   >
                   <i
