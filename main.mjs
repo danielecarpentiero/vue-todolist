@@ -22,5 +22,8 @@ createApp({
         this.newTaskText = "";
       }
     },
+    toggleTaskStatus(index) {
+      this.tasks[index].done = !this.tasks[index].done;
+    },
   },
 }).mount("#app");

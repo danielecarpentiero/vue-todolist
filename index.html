@@ -50,7 +50,9 @@
             <li v-for="(task, index) in tasks">
               <div class="card mt-2 mb-2">
                 <div class="card-body d-flex justify-content-between">
-                  <span :class="{ 'completed': task.done }"
+                  <span
+                    :class="{ 'completed': task.done }"
+                    @click="toggleTaskStatus(index)"
                     >{{ task.text }}</span
                   >
                   <i
